@@ -1,0 +1,52 @@
+.sidebar {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    min-width: 250px;
+    padding: 1rem;
+    background-color: #091928;
+    color: white;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .logo img {
+    height: 40px;
+    margin-right: 0.5rem;
+  }
+  
+  .navList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 0;
+    transition: 0.2s;
+  }
+  
+  .link img {
+    height: 24px;
+    margin-right: 0.5rem;
+  }
+  
+  .link:hover {
+    color: #3b82f6;
+    cursor: pointer;
+  }
+  
+  .active {
+    color: #3b82f6;
+  }
+  
