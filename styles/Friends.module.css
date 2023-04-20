@@ -1,0 +1,116 @@
+.container {
+  padding: 2rem;
+}
+
+.friends-container {
+  padding: 1rem;
+}
+
+.filter-area {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 24px;
+}
+
+.filter-button {
+  box-sizing: border-box;
+  width: 59px;
+  height: 37px;
+  left: 561px;
+  top: 126px;
+  background: none;
+  border: 1px solid #ABABAB;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 0.5rem;
+}
+
+.separator {
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 0 1rem;
+  height: 1.5rem;
+}
+
+.clear-filters {
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.friends-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.filterWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.friendsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.loadMoreWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.loadMoreBtn {
+  background-color: #0070f3;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+.clearAllBtn {
+  background-color: transparent;
+  border: none;
+  color: #0070f3;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  text-decoration: underline;
+}
+
+.friends-container {
+  padding: 1rem;
+  height: 80px;
+  padding-top: 94px;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.friend-row {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
