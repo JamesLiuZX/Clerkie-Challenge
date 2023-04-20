@@ -11,6 +11,7 @@ const Friends = () => {
   const [filteredFriends, setFilteredFriends] = useState([]);
   const [isFetching, setIsFetching] = useInfiniteScroll(fetchMoreFriends);
   const [showFilterMenu, setShowFilterMenu] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const fetchFriends = useCallback(async () => {
     setFriends((prevFriends) => [...prevFriends, ...data]);
@@ -53,7 +54,7 @@ const Friends = () => {
     <div className={styles['friends-container']}>
       <div className={styles['filter-area']}>
         <button
-          className={styles['filter-button']}
+          className={`${styles['filter-button']} ${isDarkMode ? styles['filter-button-dark'] : ''}`}
           onClick={() => setShowFilterMenu((prevState) => !prevState)}
         >
           <img src="filter.svg" alt="Filter" width='25' height='25' />

@@ -30,6 +30,20 @@
   margin-right: 0.5rem;
 }
 
+.filter-button-dark {
+  box-sizing: border-box;
+  width: 59px;
+  height: 37px;
+  left: 561px;
+  top: 126px;
+  background: #424242;
+  border: 1px solid #ABABAB;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 0.5rem;
+}
+
 .separator {
   border-left: 1px solid rgba(0, 0, 0, 0.5);
   margin: 0 1rem;
@@ -94,13 +108,6 @@
   padding: 1rem;
   height: 80px;
   padding-top: 94px;
-}
-
-.filter-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
 }
 
 .friend-row {
