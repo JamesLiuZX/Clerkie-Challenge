@@ -3,6 +3,8 @@ import useInfiniteScroll from '../hooks/useInfiniteScroll';
 import FriendRow from './FriendRow';
 import FilterMenu from './FilterMenu';
 import styles from '../styles/Friends.module.css';
+import Loader from './Loader';
+import loaderStyles from '../styles/Loader.module.css';
 
 import data from '../data/people.json';
 
@@ -14,7 +16,9 @@ const Friends = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const fetchFriends = useCallback(async () => {
-    setFriends((prevFriends) => [...prevFriends, ...data]);
+    setTimeout(() => {
+      setFriends((prevFriends) => [...prevFriends, ...data]);
+    }, 1000);
   }, []);
 
   useEffect(() => {
@@ -44,7 +48,7 @@ const Friends = () => {
   const handleClearFilters = () => {
     setShowFilterMenu(false);
     setFilteredFriends(friends);
-  };
+  };  
 
   const handleCloseMenu = () => {
     setShowFilterMenu(false);
@@ -66,12 +70,11 @@ const Friends = () => {
         </span>
       </div>
       <div className={styles['friends-list']}>
-        {filteredFriends.map((friend) => (
-          <FriendRow key={friend.id} friend={friend} />
-        ))}
+        {filteredFriends.length === 0
+          ? Array.from({ length: 5 }).map((_, i) => <Loader key={i} />)
+          : filteredFriends.map((friend) => <FriendRow key={friend.id} friend={friend} />)}
         {isFetching && (
-          <div className={styles['loading-placeholder']}>
-            {/* Display loading placeholder here */}
+          <div className={loaderStyles['loading']}>
           </div>
         )}
       </div>
