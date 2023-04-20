@@ -15,25 +15,39 @@ const Friends = () => {
   const [showFilterMenu, setShowFilterMenu] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const fetchFriends = useCallback(async () => {
+  // We introduce a timeout of 1s to showcase the loader effect.
+  const fetchInitialFriends = useCallback(async () => {
     setTimeout(() => {
-      setFriends((prevFriends) => [...prevFriends, ...data]);
+      setFriends((prevFriends) => [
+        ...prevFriends,
+        ...data.map((friend, index) => ({ ...friend, dataIndex: prevFriends.length + index })),
+      ]);
     }, 1000);
   }, []);
 
+  // This is the actual fetch function that subsequent fetches call.
+  const fetchFriends = useCallback(() => {
+    setFriends((prevFriends) => [
+      ...prevFriends,
+      ...data.map((friend, index) => ({ ...friend, dataIndex: prevFriends.length + index })),
+    ]);
+  }, []);
+
   useEffect(() => {
-    fetchFriends();
-  }, [fetchFriends]);
+    fetchInitialFriends();
+  }, []);
 
   useEffect(() => {
     setFilteredFriends(friends);
   }, [friends]);
 
+  // We introduce a slight delay to handle when the user slides the scrollbar all the way down, 
+  // to prevent a large number of fetches being called in a short amount of time.
   function fetchMoreFriends() {
     setTimeout(() => {
       fetchFriends();
       setIsFetching(false);
-    }, 1000);
+    }, 300);
   }
 
   const handleApplyFilters = (selectedFilters) => {
@@ -70,9 +84,9 @@ const Friends = () => {
         </span>
       </div>
       <div className={styles['friends-list']}>
-        {filteredFriends.length === 0
-          ? Array.from({ length: 5 }).map((_, i) => <Loader key={i} />)
-          : filteredFriends.map((friend) => <FriendRow key={friend.id} friend={friend} />)}
+      {filteredFriends.length === 0
+        ? Array.from({ length: 5 }).map((_, i) => <Loader key={i} />)
+        : filteredFriends.map((friend) => <FriendRow key={friend.dataIndex} friend={friend} />)}
         {isFetching && (
           <div className={loaderStyles['loading']}>
           </div>

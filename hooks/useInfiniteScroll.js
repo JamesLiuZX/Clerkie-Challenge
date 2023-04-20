@@ -1,17 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const useInfiniteScroll = (callback) => {
   const [isFetching, setIsFetching] = useState(false);
-
-  const handleScroll = () => {
-    if (
-      window.innerHeight + document.documentElement.scrollTop !==
-        document.documentElement.offsetHeight ||
-      isFetching
-    )
-      return;
-    setIsFetching(true);
-  };
+  const EXTEND_THRESHOLD = 80;
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -21,7 +12,16 @@ const useInfiniteScroll = (callback) => {
   useEffect(() => {
     if (!isFetching) return;
     callback();
-  }, [isFetching]);
+  }, [isFetching, callback]);
+
+  function handleScroll() {
+    let scrollPosition = window.innerHeight + document.documentElement.scrollTop;
+    let scrollHeight = document.documentElement.scrollHeight;
+    let scrollPercentage = (scrollPosition / scrollHeight) * 100;
+
+    if (scrollPercentage < EXTEND_THRESHOLD || isFetching) return;
+    setIsFetching(true);
+  }
 
   return [isFetching, setIsFetching];
 };
