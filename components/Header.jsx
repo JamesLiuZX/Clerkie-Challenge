@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/Header.module.css';
 
-const TopHeader = ({ title }) => {
+const Header = ({ title }) => {
   return (
     <div className={styles.container}>
       <span className={styles.title}>{title}</span>
@@ -9,4 +9,4 @@ const TopHeader = ({ title }) => {
   );
 };
 
-export default TopHeader;
+export default Header;
