@@ -1,74 +1,127 @@
 .filter-menu {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 1rem;
-    position: absolute;
-    z-index: 1;
-  }
-  
-  .filter-menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  
-  .filter-menu-title {
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .filter-menu-close {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .filter-options {
-    margin-bottom: 1rem;
-  }
-  
-  .apply-btn {
-    background-color: black;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    cursor: pointer;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-    width: 90%;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .clearAll {
-    font-size: 0.2rem;
-    color: rgba(94, 94, 94, 0.5);
-    cursor: pointer;
-  }
-  
-  .title {
-    font-weight: bold;
-  }
-  
-  .closeButton {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-  }
-  
-  .separator {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin-bottom: 1rem;
-  }
+  position: absolute;
+  width: 320px;
+  height: 286px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.filter-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+  padding-right: 1rem;
+}
+
+.filter-menu-title{ 
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #424242;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #424242;
+}
+
+
+.title {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #686868;
+  flex: 1;    
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.clearAll {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #D7D7D7;
+}
+
+.clearAll:hover {
+  color: #3399FF;
+}
+
+.title {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #686868;
+  margin-bottom: 0.5rem;
+}
+
+.filter-options {
+  margin-bottom: 1rem;
+}
+
+.status-row {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 270px;
+  height: 19px;
+  margin-bottom: 25px;
+  color: #424242;
+}
+
+.checkbox {
+  width: 19px;
+  height: 19px;
+  padding-bottom: 5px;
+}
+
+.apply-btn {
+  position: absolute;
+  width: 90%;
+  height: 45px;
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  bottom: 1rem;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.separator {
+  position: absolute;
+  width: calc(100% - 2rem);
+  height: 0;
+  border: 1px solid #EAEAEA;
+  border-radius: 2px;
+  left: 1rem;
+}
