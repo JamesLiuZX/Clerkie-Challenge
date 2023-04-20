@@ -25,14 +25,6 @@ const Friends = () => {
     }, 1000);
   }, []);
 
-  // This is the actual fetch function that subsequent fetches call.
-  const fetchFriends = useCallback(() => {
-    setFriends((prevFriends) => [
-      ...prevFriends,
-      ...data.map((friend, index) => ({ ...friend, dataIndex: prevFriends.length + index })),
-    ]);
-  }, []);
-
   useEffect(() => {
     fetchInitialFriends();
   }, []);
@@ -45,10 +37,36 @@ const Friends = () => {
   // to prevent a large number of fetches being called in a short amount of time.
   function fetchMoreFriends() {
     setTimeout(() => {
-      fetchFriends();
+      const newFriends = data.map((friend, index) => ({
+        ...friend,
+        dataIndex: friends.length + index,
+      }));
+  
+      if (filteredFriends.length === friends.length) {
+        // If no filter is applied, update both friends and filteredFriends
+        setFriends((prevFriends) => [...prevFriends, ...newFriends]);
+        setFilteredFriends((prevFilteredFriends) => [
+          ...prevFilteredFriends,
+          ...newFriends,
+        ]);
+      } else {
+        // If a filter is applied, update only filteredFriends
+        setFilteredFriends((prevFilteredFriends) => [
+          ...prevFilteredFriends,
+          ...newFriends.filter((newFriend) =>
+            prevFilteredFriends.some(
+              (filteredFriend) =>
+                filteredFriend.status === newFriend.status &&
+                filteredFriend.name !== newFriend.name
+            )
+          ),
+        ]);
+      }
+  
       setIsFetching(false);
     }, 300);
   }
+  
 
   const handleApplyFilters = (selectedFilters) => {
     if (selectedFilters.length === 0) {
