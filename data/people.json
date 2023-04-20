@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "123-456-7890",
+    "status": ""
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "phone": "234-567-8901",
+    "status": "Close Friends"
+  },
+  {
+    "id": 3,
+    "name": "Michael Brown",
+    "email": "michael.brown@example.com",
+    "phone": "345-678-9012",
+    "status": ""
+  },
+  {
+    "id": 4,
+    "name": "Samantha Johnson",
+    "email": "samantha.johnson@example.com",
+    "phone": "456-789-0123",
+    "status": "Super Close Friends"
+  },
+  {
+    "id": 5,
+    "name": "Kevin Davis",
+    "email": "kevin.davis@example.com",
+    "phone": "567-890-1234",
+    "status": "Close Friends"
+  },
+  {
+    "id": 6,
+    "name": "Sarah Taylor",
+    "email": "sarah.taylor@example.com",
+    "phone": "678-901-2345",
+    "status": ""
+  },
+  {
+    "id": 7,
+    "name": "Emma Jackson",
+    "email": "emma.jackson@example.com",
+    "phone": "123-456-7891",
+    "status": "Super Close Friends"
+  },
+  {
+    "id": 8,
+    "name": "Daniel White",
+    "email": "daniel.white@example.com",
+    "phone": "234-567-8902",
+    "status": "Close Friends"
+  },
+  {
+    "id": 9,
+    "name": "Olivia Harris",
+    "email": "olivia.harris@example.com",
+    "phone": "345-678-9013",
+    "status": ""
+  },
+  {
+    "id": 10,
+    "name": "David Martin",
+    "email": "david.martin@example.com",
+    "phone": "456-789-0124",
+    "status": "Super Close Friends"
+  },
+  {
+    "id": 11,
+    "name": "Emily Thompson",
+    "email": "emily.thompson@example.com",
+    "phone": "567-890-1235",
+    "status": "Close Friends"
+  },
+  {
+    "id": 12,
+    "name": "James Garcia",
+    "email": "james.garcia@example.com",
+    "phone": "678-901-2346",
+    "status": ""
+  },
+  {
+    "id": 13,
+    "name": "Sophia Martinez",
+    "email": "sophia.martinez@example.com",
+    "phone": "123-456-7892",
+    "status": "Super Close Friends"
+  },
+  {
+    "id": 14,
+    "name": "Henry Rodriguez",
+    "email": "henry.rodriguez@example.com",
+    "phone": "234-567-8903",
+    "status": "Close Friends"
+  }
+]
