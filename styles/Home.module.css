@@ -8,14 +8,20 @@
   margin-bottom: 1rem;
 }
 
-.separator {
-  height: 2px;
-  background: linear-gradient(to right, grey, white);
-  margin-bottom: 1rem;
-}
-
 .welcome {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
+  position: absolute;
+  width: 433px;
+  height: 31px;
+  left: 869px;
+  top: 525px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  
+  color: #000000;
 }
