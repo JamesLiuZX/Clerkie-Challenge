@@ -1,6 +1,6 @@
 ## Infinite Scrolling Friends Page
 
-This is an infinite scrolling app made with Next.js and React, for the Clerkie Coding Assignment 2023. 
+This is an infinite scrolling app made with Next.js and React, for the Clerkie Coding Assignment 2023, done in a day. 
 
 Features:
 1. Infinite scrolling - This is achieved via a custom hook `useInfiniteScroll.js`. New content will be fetched whenever your page position exceeds a defined threshold, and the page will be extended. 
